@@ -1,23 +1,17 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import { Provider } from "react-redux";
-import users from '../reducers/user';
+import user from '../reducers/user';
+import tweets from '../reducers/tweets';
 
 import { persistStore, persistReducer } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import storage from "redux-persist/lib/storage";
 
-import {
-  combineReducers,
-  configureStore,
-  getDefaultMiddleware,
-} from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 
-const reducers = combineReducers({
-  // tweets,
-  users,
-});
+const reducers = combineReducers({ tweets, user });
 const persistConfig = { key: "hackatweet", storage };
 
 const store = configureStore({

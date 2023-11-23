@@ -1,13 +1,18 @@
 import styles from '../styles/NewTweet.module.css';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addTweet } from '../reducers/tweets';
 
 function NewTweet(props) {
 
     const [tweetText, setTweetText] = useState('');
 
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user.value);
+
     const handleTweetChange = (e) => {
         if (e.target.value.length > 280) return;
-        setTweetText(e.target.value)
+        setTweetText(e.target.value);
     };
 
     const handleTweetClick = async (e) => {
@@ -19,6 +24,8 @@ function NewTweet(props) {
         });
         const data = await resp.json();
         console.log(data);
+        dispatch(addTweet({user: '', tweetBody: tweetText}));
+        setTweetText('');
     };
 
     return (
