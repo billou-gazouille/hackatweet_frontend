@@ -3,14 +3,31 @@ import SignUp from './SignUp';
 import SignIn from './SignIn';
 import { useState } from "react";
 import Image from 'next/image';
-import logo from '../bgImage.png';
+import bgImage from '../bgImage.png';
+import hackertweetLogo from '../hackertweetLogo.png';
 
 function Login() {
   return (
-    <div>
-      <Image src={logo} width={400} height={700} />
-      <SignUp/>
-      <SignIn/>
+    <div className={styles.container}>
+      <Image src={bgImage} width={400} height={700} />
+      <div className={styles.panelContainer}>  
+        <div className={styles.panel}>
+          <Image src={hackertweetLogo} width={40} height={40} />
+          <h1 className={styles.seeWhatsHappening}>See what's happening</h1>
+          <h3>Join Hackertweet today</h3>
+          <button
+            className={styles.signupButton}
+            // onClick={() => handleSigninClick()}
+          >Sign up
+          </button>
+          <h3>Already have an account?</h3>
+          <button
+            className={styles.signinButton}
+            // onClick={() => handleSigninClick()}
+          >Sign in
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
