@@ -24,7 +24,7 @@ function Home() {
   //   // console.log(data);
   //   const isLiked = likes.some((like) => like.title === like.title);
 
-  //   return <Tweets key={i} {...data} isLiked={isLiked} />;
+  // return <Tweets key={i} {...data} isLiked={isLiked} />;
   // });
 
   return (
