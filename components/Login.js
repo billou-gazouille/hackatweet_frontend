@@ -9,8 +9,8 @@ function Login() {
   return (
     <div>
       <Image src={logo} width={400} height={700} />
-      {/* <SignUp/> */}
-      {/* <SignIn/> */}
+      <SignUp/>
+      <SignIn/>
     </div>
   );
 }

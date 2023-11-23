@@ -22,13 +22,11 @@ function Home() {
 
   return (
     <div>
-<<<<<<< HEAD
       <Login/>
 =======
       <Signup />
-      <Login />
+
       {tweetsData}
->>>>>>> 76938ce3a0e87d28a75e95bafe101e5960908e39
     </div>
   );
 }
