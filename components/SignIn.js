@@ -3,7 +3,7 @@ import logo from '../hackertweetLogo.png';
 import { useState } from "react";
 import Image from 'next/image';
 
-function SignIn() {
+function SignIn(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,6 +20,7 @@ function SignIn() {
 
   const handleExitClick = () => {
     console.log("handleExitClick");
+    props.closeSigninModal();
   };
 
   return (

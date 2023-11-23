@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logo from '../hackertweetLogo.png';
 import { useState } from 'react';
 
-function SignUp() {
+function SignUp(props) {
 
     const [firstName, setFirstName] = useState('');
     const [username, setUsername] = useState('');
@@ -22,7 +22,7 @@ function SignUp() {
 
     const handleExitClick = () => {
         console.log('handleExitClick');
-        
+        props.closeSignupModal();
     };
 
     return (
