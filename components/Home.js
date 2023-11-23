@@ -4,6 +4,7 @@ import Signup from "./Signup";
 import Login from "./Login";
 import Tweet from "./Tweet";
 import { useEffect, useState } from "react";
+import NewTweet from "./NewTweet";
 
 function Home() {
   const [tweetsData, setTweetsData] = useState([]);
@@ -21,6 +22,7 @@ function Home() {
 
   return (
     <div>
+      <NewTweet/>
       {tweets}
     </div>
   );
