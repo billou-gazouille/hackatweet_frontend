@@ -2,6 +2,7 @@ import styles from '../styles/SignUp.module.css';
 import Image from 'next/image';
 import logo from '../hackertweetLogo.png';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 function SignUp(props) {
 

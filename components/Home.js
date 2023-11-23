@@ -21,10 +21,6 @@ function Home() {
 
   return (
     <div>
-      {/* <Login/> */}
-
-      {/* <Signup /> */}
-
       {tweets}
     </div>
   );

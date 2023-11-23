@@ -2,10 +2,13 @@ import styles from "../styles/SignIn.module.css";
 import logo from '../hackertweetLogo.png';
 import { useState } from "react";
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 function SignIn(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const router = useRouter();
 
   const handleSigninClick = async () => {
     //console.log('handleSigninClick');
@@ -16,6 +19,9 @@ function SignIn(props) {
     });
     const data = await resp.json();
     console.log(data);
+    if (data.result){
+      router.push('/home');
+    }
   };
 
   const handleExitClick = () => {

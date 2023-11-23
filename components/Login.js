@@ -48,8 +48,10 @@ function Login() {
         >Sign in
         </button>
       </div>
-      {isSignupModalOpen && <SignUp closeSignupModal={closeSignupModal} style={styles.overlay}/>}
-      {isSigninModalOpen && <SignIn closeSigninModal={closeSigninModal} style={styles.overlay}/>}
+      <div className={styles.overlayContent}>
+        {isSignupModalOpen && <SignUp closeSignupModal={closeSignupModal} style={styles.overlay}/>}
+        {isSigninModalOpen && <SignIn closeSigninModal={closeSigninModal} style={styles.overlay}/>}
+      </div>
     </div>
   );
 }
