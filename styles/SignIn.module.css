@@ -1,6 +1,6 @@
 .panel{
     width: 40vw;
-    height: 60vh;
+    height: 40vh;
     color: white;
     background-color: #151D27;
     display: flex;
@@ -26,18 +26,18 @@
     /* margin: 10px; */
 }
 
-.signupButton{
+.signinButton{
     border-radius: 50px;
     color: black;
     font-size: 14pt;
     font-weight: bolder;
 }
 
-.signupButton:hover,.cross:hover{
+.signinButton:hover,.cross:hover{
     cursor: pointer;
 }
 
-.signupButton,.inputField{
+.signinButton,.inputField{
     width: 50%;
     height: 5vh;
 }

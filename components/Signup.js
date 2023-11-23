@@ -1,9 +1,9 @@
-import styles from '../styles/Signup.module.css';
+import styles from '../styles/SignUp.module.css';
 import Image from 'next/image';
-import logo from '../hackertweetLogo.png'
+import logo from '../hackertweetLogo.png';
 import { useState } from 'react';
 
-function Signup() {
+function SignUp() {
 
     const [firstName, setFirstName] = useState('');
     const [username, setUsername] = useState('');
@@ -62,4 +62,4 @@ function Signup() {
     );
 }
 
-export default Signup;
+export default SignUp;
