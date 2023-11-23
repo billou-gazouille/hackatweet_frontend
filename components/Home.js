@@ -18,13 +18,6 @@ function Home() {
     <Tweet key={i} {...data}/>
   );
 
-  // let tweets = [];
-  // //tweetsData.forEach(data => tweets.push(<Tweet key={i} {...data}/>));
-
-  // for (let data of tweetsData){
-  //   tweets.push(<Tweet key={i} {...data}/>);
-  // }
-  
 
   return (
     <div>
