@@ -1,3 +1,29 @@
-/* .tweet{
+.tweet{
+width: 600%;
+height: 550%;
+border-bottom: 1px solid #dbd2d2; /* Vous pouvez définir l'épaisseur et la couleur de la ligne */
+padding-bottom: 10px; /* Ajoute un espace entre la ligne et le contenu de la div */
+margin-bottom: 10px; /* Ajoute de l'espace entre les divs */
+}
 
-} */
+.tweetHeader {
+    display: flex;
+    justify-content: left;
+    padding: auto;
+}
+
+.firstname{
+    margin-left: 2%;
+    font-weight: bold;
+}
+.username{
+    margin-left: 2%;
+}
+
+.userIcon{
+    margin-left: 2%;
+}
+
+.tweetContent{
+    padding: 2%;
+}
