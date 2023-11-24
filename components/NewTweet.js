@@ -23,8 +23,12 @@ function NewTweet(props) {
       body: JSON.stringify({ tweetBody: tweetText, token: user.token }),
     });
     const data = await resp.json();
-    console.log(data);
-    dispatch(addTweet({ token: user.token, tweetBody: tweetText }));
+    console.log('RARARAR:' ,data);
+    dispatch(addTweet({ 
+      tweetBody: tweetText, 
+      firstname: user.firstname, 
+      username: user.username 
+    }));    
     setTweetText("");
   };
 

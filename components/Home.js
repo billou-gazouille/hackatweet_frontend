@@ -28,9 +28,9 @@ function Home() {
               console.log("JE CLG DATA.TWEETS", data.tweets);
               return {
                 // user: t.user,
-                tweetBody: t.tweets,
-                firstname: t.firstname,
-                username: t.username,
+                tweetBody: t.tweet,
+                firstname: t.user.firstname,
+                username: t.user.username,
               };
             })
           )

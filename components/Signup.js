@@ -15,7 +15,7 @@ function SignUp(props) {
         const resp = await fetch('http://localhost:3000/users/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({firstName, username, password}),
+            body: JSON.stringify({firstname: firstName, username, password}),
         });
         const data = await resp.json();
         console.log(data);
