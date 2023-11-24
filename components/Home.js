@@ -1,4 +1,3 @@
-
 import styles from "../styles/Home.module.css";
 import Signup from "./Signup";
 import Login from "./Login";
@@ -14,14 +13,12 @@ function Home() {
       .then((data) => setTweetsData(data.tweets));
   }, []);
 
-  const tweets = tweetsData.map((data, i) => 
-    <Tweet key={i} {...data}/>
-  );
-
+  const tweets = tweetsData.map((data, i) => <Tweet key={i} {...data} />);
+  console.log(tweetsData);
 
   return (
     <div>
-      {tweets}
+      <Tweet tweet={tweetsData} />
     </div>
   );
 }
