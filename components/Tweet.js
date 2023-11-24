@@ -1,26 +1,26 @@
 import styles from "../styles/Tweet.module.css";
 
-function Tweet({ user, tweet, hashtags, date }) {
-  const tweetData = tweet;
-  console.log(user, tweet, hashtags, date, tweetData);
+function Tweet({ username, tweetBody, firstname }) {
+  // const tweetData = tweet;
+  console.log("bonjour je suis", username, tweetBody, firstname);
 
   return (
     <div className={styles.tweet}>
-      {/* Contenu du tweet */}
-      <div className={styles.userIcon}>
-        {/* Icône utilisateur */}
-        <img src="chemin vers icone" alt="userIcon" />
+      {/* Contenu global */}
+      <div className={styles.tweetHeader}>
+        <div className={styles.userIcon}>
+          <img src="chemin vers icone" alt="userIcon" />
+          {/* Icône utilisateur */}
+        </div>
       </div>
+      <p>{firstname}</p>
+      <p>@{username}</p>
+      {/* <p>Date: {date}</p> */}
       <div className={styles.tweetContent}>
         {/* Contenu du tweet (texte, média, etc.) */}
-        {tweetData}
+        {tweetBody}
       </div>
-      <div className={styles.tweetHeader}>
-        {/* Header du tweet (nom d'utilisateur, hashtags, date, etc.) */}
-        <p>User: {user}</p>
-        <p>Hashtags: {hashtags}</p>
-        <p>Date: {date}</p>
-      </div>
+      {/* Header du tweet (nom d'utilisateur, hashtags, date, etc.) */}
     </div>
   );
 }
