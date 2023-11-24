@@ -2,9 +2,11 @@ import { useState } from "react";
 import styles from "../styles/User.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from "react-redux";
 
 function User() {
-  //const [tweetsData, setTweetsData] = useState([]);
+  
+  const user = useSelector(state => state.user.value);
 
   return (
     <div className={styles.container}>
@@ -12,8 +14,8 @@ function User() {
             <FontAwesomeIcon icon={faUser} />         
         </div>
         <div>
-            <div>first name</div>
-            <div>username</div>
+            <div>{user.firstname}</div>
+            <div>{user.username}</div>
         </div>
     </div>
   );

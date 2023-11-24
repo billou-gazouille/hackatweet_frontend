@@ -4,6 +4,7 @@ import User from "./User";
 import Tweet from "./Tweet";
 import { useEffect, useState } from "react";
 import NewTweet from "./NewTweet";
+import Trends from "./Trends";
 import Image from 'next/image';
 import hackertweetLogo from '../hackertweetLogo.png';
 import { useDispatch, useSelector } from 'react-redux';
@@ -37,11 +38,13 @@ function Home() {
       </div>
       <div className={styles.centralPanel}>
         <NewTweet/>
-        {tweets}
+        <div className={styles.tweetsContainer}>
+          {tweets}
+        </div>
       </div>
       <div className={styles.rightPanel} >
         <div className={styles.trendsText}>
-          Trends
+          <Trends/>
         </div>
       </div>
     </div>

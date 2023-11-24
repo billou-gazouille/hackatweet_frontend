@@ -3,12 +3,16 @@ import logo from '../hackertweetLogo.png';
 import { useState } from "react";
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { login } from '../reducers/user';
+import { useDispatch } from "react-redux";
 
 function SignIn(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const router = useRouter();
+
+  const dispatch = useDispatch();
 
   const handleSigninClick = async () => {
     //console.log('handleSigninClick');
@@ -21,6 +25,7 @@ function SignIn(props) {
     console.log(data);
     if (data.result){
       router.push('/home');
+      dispatch(login({token: data.token, username, firstname: data.firstname}));
     }
   };
 
