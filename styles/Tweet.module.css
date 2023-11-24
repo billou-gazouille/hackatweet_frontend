@@ -1,12 +1,13 @@
 .tweet{
-width: 600%;
-height: 550%;
+width: 50vw;
+height: 10vh;
 border-bottom: 1px solid #dbd2d2; /* Vous pouvez définir l'épaisseur et la couleur de la ligne */
 padding-bottom: 10px; /* Ajoute un espace entre la ligne et le contenu de la div */
 margin-bottom: 10px; /* Ajoute de l'espace entre les divs */
 }
 
 .tweetHeader {
+    background-color: blueviolet;
     display: flex;
     justify-content: left;
     padding: auto;

@@ -11,7 +11,6 @@ import hackertweetLogo from "../hackertweetLogo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setTweets, addTweet } from "../reducers/tweets";
 
-
 function Home() {
   const dispatch = useDispatch();
   const tweetsData = useSelector((state) => state.tweets.value);
@@ -59,14 +58,12 @@ function Home() {
         </div>
       </div>
       <div className={styles.centralPanel}>
-        <NewTweet/>
-        <div className={styles.tweetsContainer}>
-          {tweets}
-        </div>
+        <NewTweet />
+        <div className={styles.tweetsContainer}>{tweets}</div>
       </div>
-      <div className={styles.rightPanel} >
+      <div className={styles.rightPanel}>
         <div className={styles.trendsText}>
-          <Trends/>
+          <Trends />
         </div>
       </div>
     </div>
