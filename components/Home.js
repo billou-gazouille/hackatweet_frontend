@@ -69,9 +69,6 @@ function Home() {
           <Trends/>
         </div>
       </div>
-      <div className={styles.rightPanel}>
-        <div className={styles.trendsText}>Trends</div>
-      </div>
     </div>
   );
 }

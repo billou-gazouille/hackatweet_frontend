@@ -1,4 +1,6 @@
 import styles from "../styles/Tweet.module.css";
+import Image from 'next/image';
+import userImage from '../userImage.png'
 
 function Tweet({ username, tweetBody, firstname }) {
   // const tweetData = tweet;
@@ -9,8 +11,7 @@ function Tweet({ username, tweetBody, firstname }) {
       {/* Contenu global */}
       <div className={styles.tweetHeader}>
         <div className={styles.userIcon}>
-          <img src="chemin vers icone" alt="userIcon" />
-          {/* Icône utilisateur */}
+          <Image src={userImage} width={30} height={30} alt="userIcon" />
         </div>
       </div>
       <p>{firstname}</p>

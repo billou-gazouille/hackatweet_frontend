@@ -2,6 +2,7 @@ import styles from "../styles/NewTweet.module.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTweet } from "../reducers/tweets";
+import { addHashtags } from "../reducers/hashtags";
 
 function NewTweet(props) {
   const [tweetText, setTweetText] = useState("");
@@ -9,11 +10,21 @@ function NewTweet(props) {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
   //   const token = useSelector((state) => state.token.value);
+  //const hashtags = useSelector(state => state.hashtags.value);
 
   const handleTweetChange = (e) => {
     if (e.target.value.length > 280) return;
     setTweetText(e.target.value);
   };
+
+  const extractHashtags = () => {
+    const hashtags = tweetText.split(" ").filter((word) => word[0] === "#");
+    const isUnique = (item, position, array) => {
+      return hashtags.indexOf(item) === position;
+    };
+    const uniqueHashtags = hashtags.filter(isUnique);
+    return uniqueHashtags;
+  }
 
   const handleTweetClick = async (e) => {
     console.log("post tweet");
@@ -28,7 +39,9 @@ function NewTweet(props) {
       tweetBody: tweetText, 
       firstname: user.firstname, 
       username: user.username 
-    }));    
+    }));
+    const hashtags = extractHashtags();
+    dispatch(addHashtags(hashtags));
     setTweetText("");
   };
 
